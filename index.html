@@ -1,0 +1,163 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <script src="https://kit.fontawesome.com/0741ba60a7.js"></script>
+    <title>Form</title>
+    <link rel="stylesheet" href="form.css">
+</head>
+<body>
+    <div class="container">
+        <div class="frm">
+              <div class="frm-section unipd">
+                     <div class="form-header unipd">
+                         <h1>HR Form</h1>
+                         <p>Please complete the form below to apply for a position with us.</p>
+                    </div>
+              </div>
+              <form action="thanks.html">
+                <div class="frm-body unipd">
+                  <div class="name">
+                      <label id="lbl">Full Name</label>
+                      <div class="nm-boxs">
+                             <span> <input type="text"> First Name </span>
+                             <span> <input type="text"> Middle Name </span>
+                             <span> <input type="text"> Last Name </span>
+                      </div>
+                  </div>
+                  <div class="birth-date">
+                    <label id="lbl">Birth Date </label>
+                    <div class="birth-box">
+                      <div class="smt">
+                        <select name="" id="month">
+                          <option value=""></option>
+                          <option value="January"> January</option>
+                          <option value="February"> February</option>
+                          <option value="March"> March</option>
+                          <option value="April"> April</option>
+                          <option value="May"> May</option>
+                          <option value="June">June</option>
+                        </select>
+                        <span>Month</span>
+                      </div>
+                      <div class="smt">
+                        <select name="" id="month">
+                          <option value=""> </option>
+                          <option value="1"> 1</option>
+                          <option value="2"> 2</option>
+                          <option value="3"> 3</option>
+                          <option value="4"> 4</option>
+                          <option value="5"> 5</option>
+                          <option value="6">6</option>
+                        </select>
+                        <span>Day</span>
+                      </div>
+                      <div class="smt">
+                        <select name="" id="month">
+                          <option value=""> </option>
+                          <option value="1990"> 1990</option>
+                          <option value="1991"> 1991</option>
+                          <option value="1992"> 1992</option>
+                          <option value="1993"> 1993</option>
+                          <option value="1994"> 1994</option>
+                          <option value="1997">1997</option>
+                        </select>
+                        <span>Year</span>
+                      </div>
+                      
+                  
+                    </div>
+                    
+                  </div>
+                  <div class="Current-Address">
+                      <label id="lbl">Current Address</label>
+                      <div class="street"> 
+                        <span> <input type="text"> Street Address  </span>
+                      </div>
+                      <div class="street2">
+                        <span> <input type="text"> Street Address Line 2 </span>
+                      </div>
+                      <div class="city-prov">
+                        <span> <input type="text"> City   </span>
+                        <span> <input type="text">  State / Province</span>
+                      </div>
+                      <div class="postl-code">
+                        <span> <input type="text"> Postal / Zip Code </span>
+                      </div>
+                  </div> 
+                  <div class="email">
+                      <label id="lbl">Email Address </label>
+                      <div class="email-box">
+                        <span> <input type="text" placeholder="ex:myname@example.com"> example@example.com </span>
+                      </div>
+                  </div>
+                  <div class="phn">
+                      <label id="lbl">Phone Number </label>
+                      <input type="number" onkeypress="return isNumberKey(event)" placeholder="(+880) 000-0000000"> 
+                  </div>
+                  <div class="phn lnkdn">
+                      <label id="lbl"> LinkedIn  </label>
+                      <input type="text"> 
+                  </div>
+                  <hr>
+                  <div class="Position">
+                    <label id="lbl">  Position Applied   </label>
+                    <select name="" id="positioned">
+                      <option value="please select"> please select </option>
+                      <option value="Marketing Specialist"> Marketing Specialist</option>
+                      <option value="Sales Manager"> Sales Manager</option>
+                      <option value="Product Lead"> Product Lead</option>
+                      <option value="Developer"> Developer</option>
+                      <option value="Designer"> Designer</option>
+                    </select>
+                  </div>
+                  <div class="hear Position">
+                    <label id="lbl"> How did you hear about us  </label>
+                    <select name="" id="positioned">
+                      <option value="please select"> please select </option>
+                      <option value="From Linkedin"> From Linkedin</option>
+                      <option value="Facebook post"> Facebook post</option>
+                      <option value="news"> news</option>
+                      <option value="From Developer"> From Developer</option>
+                      <option value=" From Designer">  From Designer</option>
+                    </select>
+                  </div>
+                  <div class="start-date Position">
+                    <label id="lbl"> Available Start Date   </label>
+                    <div class="pobox">
+                      <input type="date" id="start" name="trip-start"
+                      value="2018-07-22"
+                      min="2018-01-01" max="2018-12-31">
+                    </div>
+                  </div>
+                  <div class="upload-resume">
+                    <label id="lbl"> Upload Your Resume   </label>
+                    <input type="file" id="imgupload" style="display:none" onchange="javascript:updateList()"/>
+                    <div class="resume-up" id="res">
+                        <div class="ic">
+                            <i class="fa-solid fa-cloud"></i>
+                            <i class="fa-solid fa-arrow-up"></i>
+                        </div>
+                        <h3>Browse  Files</h3>
+                        <p>Drag and drop files here</p>
+                        
+                    </div>
+                    <div id="file"></div>
+                    
+                  </div>
+                  <div class="cover-ltr">
+                    <label id="lbl">  Cover Letter  </label>
+                    <textarea id="cover-text"></textarea>
+                  </div>
+                  <button type="submit">Submit</button>
+                </div>
+              </form>
+        </div>
+    </div>
+
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+    <script src="/form.js"></script>
+</body>
+</html>
